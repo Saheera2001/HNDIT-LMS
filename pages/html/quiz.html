@@ -1,0 +1,1343 @@
+<html>
+    <head>
+
+        <title>Quiz</title>
+        <link rel="stylesheet" href="../css/fontawesome/css/all.min.css">
+        
+        <script>
+            function afterLoading(){
+                var visualDiv = document.getElementById("visual");
+                visualDiv.style.display = "block";
+                var webDiv = document.getElementById("web");
+                webDiv.style.display = "none";
+                var informationDiv = document.getElementById("information");
+                informationDiv.style.display = "none";
+                var computerDiv = document.getElementById("computer");
+                computerDiv.style.display = "none";
+                var communicationDiv = document.getElementById("communication");
+                communicationDiv.style.display = "none";
+
+            }
+            
+            function onChange(){
+                var select = document.getElementById("quizType");
+                // alert(select.value); // NEW or OLD
+                switch(select.value){
+                    case "visual":
+                        var visualDiv = document.getElementById("visual");
+                        visualDiv.style.display = "block";
+                        var webDiv = document.getElementById("web");
+                        webDiv.style.display = "none";
+                        var informationDiv = document.getElementById("information");
+                        informationDiv.style.display = "none";
+                        var computerDiv = document.getElementById("computer");
+                        computerDiv.style.display = "none";
+                        var communicationDiv = document.getElementById("communication");
+                        communicationDiv.style.display = "none";
+                        break;
+
+                    case "web":
+                        var webDiv = document.getElementById("web");
+                        webDiv.style.display = "block";
+                        var visualDiv = document.getElementById("visual");
+                        visualDiv.style.display = "none";
+                        var informationDiv = document.getElementById("information");
+                        informationDiv.style.display = "none";
+                        var computerDiv = document.getElementById("computer");
+                        computerDiv.style.display = "none";
+                        var communicationDiv = document.getElementById("communication");
+                        communicationDiv.style.display = "none";
+                        break;
+                    case "information":
+                        var webDiv = document.getElementById("web");
+                        webDiv.style.display = "none";
+                        var visualDiv = document.getElementById("visual");
+                        visualDiv.style.display = "none";
+                        var informationDiv = document.getElementById("information");
+                        informationDiv.style.display = "block";
+                        var computerDiv = document.getElementById("computer");
+                        computerDiv.style.display = "none";
+                        var communicationDiv = document.getElementById("communication");
+                        communicationDiv.style.display = "none";
+                        break;
+                    case "computer":
+                        var webDiv = document.getElementById("web");
+                        webDiv.style.display = "none";
+                        var visualDiv = document.getElementById("visual");
+                        visualDiv.style.display = "none";
+                        var informationDiv = document.getElementById("information");
+                        informationDiv.style.display = "none";
+                        var computerDiv = document.getElementById("computer");
+                        computerDiv.style.display = "block";
+                        var communicationDiv = document.getElementById("communication");
+                        communicationDiv.style.display = "none";
+                        break;
+                        
+                    case "communication":
+                        var webDiv = document.getElementById("web");
+                        webDiv.style.display = "none";
+                        var visualDiv = document.getElementById("visual");
+                        visualDiv.style.display = "none";
+                        var informationDiv = document.getElementById("information");
+                        informationDiv.style.display = "none";
+                        var computerDiv = document.getElementById("computer");
+                        computerDiv.style.display = "none";
+                        var communicationDiv = document.getElementById("communication");
+                        communicationDiv.style.display = "block";
+                        break;
+                        
+                }
+            }
+        </script>
+        <style>
+            .top-bar{
+            background-color:rgb(4, 4, 101);
+            height: 70px;
+        }
+        .logo{
+                display: inline;
+                width: 4%;
+                height: 70px;
+                margin-left: 26px;
+                float: left;
+
+            }
+        .full-form{
+            float: left;
+            display: inline;
+            height: 50px;
+            margin-left: 6px;
+            margin-top: 2px;
+        }
+        .button-box {
+            display: inline;
+            color: #fff;
+            margin: 10px;
+            font-size: 20px;
+            /* margin-left: 70px; */
+
+        }
+        .button-box a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .nav{
+            display: inline;   
+            margin-left: 320px;
+            vertical-align: super;
+            height: 50px;
+            float: left;
+            padding-top: 22px;
+        }
+        .logo-name{
+            color: #fff;
+        }
+    
+            .subjects{
+                width: 34.7%;
+                float: left;
+               
+            }
+            .courses{
+                 
+                background-color: gray;
+            }
+            .HNDIT{
+                color: #fff;
+                background-color: gray;
+            }
+            .name {
+                
+                color:#fff;
+                text-decoration: none;  
+                font-size: 25px;
+            }
+            .semester{
+                background-color: gray;
+            }
+            .visual-title{
+               
+                height: 80px;
+                background-color:rgb(13, 148, 193); 
+                  
+            }
+            .main-content{
+                width: 65%;
+                float: left;
+            }
+            .visual{
+                color:#fff;
+                margin-left: 30px; 
+                padding-top: 25px;
+                margin-top: 0;
+                padding-left:  15px;
+            }
+            .courses-title{
+                margin-top: 0;
+                padding-left:  15px;
+                color:#fff;
+            }
+            .subject-link{
+                padding: 5px 15px;
+                
+            }
+            .subject-link:nth-child(even){
+                background-color: rgb(198, 192, 192);
+            }
+            .HNDIT h1{
+                text-align: center;
+            }
+            .semester h3{
+              padding-left:  15px;  
+            }
+            .Pastpapers-year{
+                float: left;
+                padding: 38px;
+                width: 92%;
+            }
+            .Pastpapers-year ul li{
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 5px;
+                margin-top: 20px;
+                
+            }
+            .introduction{
+                margin-left: 30px; 
+                
+                padding-left:  15px;  
+            }
+            .introduction-visual{
+                
+                
+                float: left;
+                width: 55%;
+                display: inline;
+                
+                
+            }
+            .photo-two {
+               
+                height: 369px;
+                float:left;
+                width: 45%;
+                display: inline;
+                margin-top: 5%;
+                
+            }
+            .photo-two img{
+                width: 95%;
+                margin-left: 2.5%;
+                margin-right: 5%;
+                height: 294px;
+            }
+            .photo-visual{
+                height: 500px;
+            }
+            body{
+                font-family: math;
+                
+            }
+            .photo-visual img{
+                width: 100%;
+            }
+            .link-notes{
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .border{
+            background-color:rgb(4, 4, 101);
+                height: 150px;
+            }
+           .footer{
+            background-color:rgb(4, 4, 101);
+                height: 205px;
+                width: 100%;
+                float: right;
+                
+           } 
+           .pdf-link1 {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+             
+           }
+           .pdf-link{
+            
+            border-bottom: 1px solid; 
+           }
+           
+            
+           .contact{
+            width: 50%;
+            float: left;
+             display: inline;
+            color: #fff;
+           }
+           .details{
+            width: 50%;
+            float: left;
+            display: inline;
+           
+           }
+           .contact-item{
+            margin-top: 20px;
+            margin-left: 90px;
+            width: 44%;
+           
+            color: #fff;
+            font-size: large;
+            
+           }
+           .contact h3{
+            margin-left: 50px;
+           } 
+           .image img{
+            height: 53%;
+            width: 11%;
+            margin-top: 41px;
+            margin-left: 107px;
+            
+           }
+           .text{
+            margin-top: -67px;
+            margin-left: 224px;
+            color: #fff;
+            
+           }
+           .newold{
+            margin-left:379px;
+            margin-top: 10px;
+            
+            
+            
+           }
+           .newold select{
+            display:block;
+            margin-top: 10px;
+           }
+           .newold label{
+            font-weight: bold;
+           }
+           
+           
+        </style>
+    </head>
+    <body onload="afterLoading()">
+        <div class="top-bar">
+            <img class="logo" src="../../images/SLIATE.jpeg" alt="sliate logo">
+            <div class="full-form">
+                <span class="logo-name">Sri Lankan Institute Of Advance Technological Education</span><br>
+                <span class="logo-name">ශ්‍රී ලංකා උසස් තාක්ෂණ අධ්‍යපන ආයතනය</span><br>
+                <span class="logo-name">இலங்கை உயர் தொழில்நுட்ப நிறுவனம்</span>
+            </div>
+            <div class="nav">
+                <div class="button-box" >
+                  <a href="Home.html">Home</a>  
+                </div>
+                <div class="button-box">
+                    <a href="subject.html">Subjects</a>
+                </div>
+                <div class="button-box">
+                <a href="pastpaper.html">Past Papers</a>
+                </div>
+                <div class="button-box">
+                <a href="model paper.html">Model Papers</a>
+                </div>
+                <div class="button-box">
+                <a href="model paper.html">Quiz</a>
+                </div>
+                <div class="button-box">
+                    <a href="#footer"> Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="visual-title">
+                <h2 class="visual">First Year First Semester Quiz</h2><br>
+            </div>
+           
+       
+            <div class="introduction">
+                <div class="newold">
+                    <label>Quiz Type :</label>
+                    <select id="quizType" onchange="onChange()">
+                        <option value="visual">HNDIT1012 Visual Application Programming</option>
+                        <option value="web">HNDIT1022 Web Design</option>
+                        <option value="information">HNDIT1042 Information Management And Information System</option>
+                        <option value="computer">HNDIT1032 Computer And Network Systems</option>
+                        <option value="communication">HNDIT1062 Communication Skills</option>
+                    </select>
+                </div>
+                
+                <div class="quizType" id="visual">
+                    <h2>Visual Application Programming Quiz &nbsp;<i class="fa-sharp fa-solid fa-circle-down"></i></h2>
+                    <ol type="1">
+                        <li>
+                            <div class="question">What is a correct syntax to output "Hello World" in C#?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q1a1" name="q1">
+                                <label for="q1a1">Cout<<"Hello World";</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a2" name="q1">
+                                <label for="q1a2">Console.writeLine("Hello World");</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a3" name="q1">
+                                <label for="q1a3">Print("Hello World");</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a4" name="q1">
+                                <label for="q1a4">System.out.printin("Hello World");</label>
+                            </div><br>
+                        </li>
+                        <li>
+                            <div class="question">C# is an alias of C++
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q2a1" name="q2">
+                                <label for="q2a1">False</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a2" name="q2">
+                                <label for="q2a2">True</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">How do you insert COMMENTS in C# code?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q3a1" name="q3">
+                                <label for="q3a1"># This is a comment</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q3a2" name="q3">
+                                <label for="q3a2">// This is a comment</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q3a3" name="q3">
+                                <label for="q3a3">/* This is a comment</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">Which data type is used to create a variable that should store text?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q4a1" name="q4">
+                                <label for="q4a1">str</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a2" name="q4">
+                                <label for="q4a2">string</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a3" name="q4">
+                                <label for="q4a3">mystring</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a4" name="q4">
+                                <label for="q4a4">Txt</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">How do you create a variable with the numeric value 5?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q5a1" name="q5">
+                                <label for="q5a1">int x=5;</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a2" name="q5">
+                                <label for="q5a2">x=5;</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a3" name="q5">
+                                <label for="q5a3">num x=5</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a4" name="q5">
+                                <label for="q5a4">double x=5;</label>
+                            </div><br>
+                        </li>
+                        <li>
+                            <div class="question">How do you create a variable with the floating number 2.8?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q6a1" name="q6">
+                                <label for="q6a1">int x=2.8D;</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a2" name="q6">
+                                <label for="q6a2">byte x=2.8</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a3" name="q6">
+                                <label for="q6a3">double x=2.8D;</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a4" name="q6">
+                                <label for="q6a4">int x=2.8;</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">Which property can be used to find the length of a string?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q7a1" name="q7">
+                                <label for="q7a1">length()</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a2" name="q7">
+                                <label for="q7a2">length</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a3" name="q7">
+                                <label for="q7a3">Length</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a4" name="q7">
+                                <label for="q7a4">getLength()</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">Which operator is used to add together two values?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q8a1" name="q8">
+                                <label for="q8a1">The + sign</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a2" name="q8">
+                                <label for="q8a2">The * sign</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a3" name="q8">
+                                <label for="q8a3">The & sign</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">The value of a string variable can be surrounded by single quotes.
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q9a1" name="q9">
+                                <label for="q9a1">False</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q9a2" name="q9">
+                                <label for="q9a2">True</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">Which operator can be used to compare two values?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q10a1" name="q10">
+                                <label for="q10a1">= =</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a2" name="q10">
+                                <label for="q10a2">< ></label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a3" name="q10">
+                                <label for="q10a3">> <</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a4" name="q10">
+                                <label for="q10a4">=</label>
+                            </div><br>
+                        </li>
+                </ol>    
+                </div>
+                <div class="quizType" id="web">
+                    <h2> Web Design Quiz &nbsp;<i class="fa-sharp fa-solid fa-circle-down"></i></h2>
+                    <ol type="1">
+                        <li>
+                            <div class="question">What does HTML stand for?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q1a1" name="q1">
+                                <label for="q1a1">Home Tool Markup Language</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a2" name="q1">
+                                <label for="q1a2">Hyperlinks and Text Markup Language
+                                </label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a3" name="q1">
+                                <label for="q1a3">Hyper Text Markup Language</label>
+                            </div><br>
+                            
+                        </li>
+                        <li>
+                            <div class="question">Who is making the Web standards?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q2a1" name="q2">
+                                <label for="q2a1">The World Wide Web Consortium</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a2" name="q2">
+                                <label for="q2a2">Mozilla</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a3" name="q2">
+                                <label for="q2a3">Microsoft</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a4" name="q2">
+                                <label for="q2a4">Google</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">JavaScript is the same as Java.
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q3a1" name="q3">
+                                <label for="q3a1"> True </label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q3a2" name="q3">
+                                <label for="q3a2"> False</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">Which character is used to indicate an end tag?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q4a1" name="q4">
+                                <label for="q4a1">/</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a2" name="q4">
+                                <label for="q4a2">*</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a3" name="q4">
+                                <label for="q4a3">< </label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a4" name="q4">
+                                <label for="q4a4">^</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">What does CSS stand for?
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q5a1" name="q5">
+                                <label for="q5a1">Cascading Style Sheets</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a2" name="q5">
+                                <label for="q5a2">Colorful Style Sheets</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a3" name="q5">
+                                <label for="q5a3">Computer Style Sheets</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a4" name="q5">
+                                <label for="q5a4">Creative Style Sheets</label>
+                            </div><br>
+                        </li>
+                        <li>
+                            <div class="question">How does a WHILE loop start?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q6a1" name="q6">
+                                <label for="q6a1">while i=1 to 10</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a2" name="q6">
+                                <label for="q6a2">while (i<=10;i++)</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a3" name="q6">
+                                <label for="q6a3">while(i <=10)</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">Which HTML attribute is used to define inline styles?
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q7a1" name="q7">
+                                <label for="q7a1">styles</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a2" name="q7">
+                                <label for="q7a2">font</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a3" name="q7">
+                                <label for="q7a3">style</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a4" name="q7">
+                                <label for="q7a4">class</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">How do you insert a comment in a CSS file?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q8a1" name="q8">
+                                <label for="q8a1">'this is comment </label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a2" name="q8">
+                                <label for="q8a2">/*this is comment*/</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a3" name="q8">
+                                <label for="q8a3">//this is comment</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a4" name="q8">
+                                <label for="q8a4">//this is comment//</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">The external JavaScript file must contain the  tag.
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q9a1" name="q9">
+                                <label for="q9a1">False</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q9a2" name="q9">
+                                <label for="q9a2">True</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">How to write an IF statement in JavaScript?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q10a1" name="q10">
+                                <label for="q10a1">if i=5</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a2" name="q10">
+                                <label for="q10a2">if i==5 then</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a3" name="q10">
+                                <label for="q10a3">if(i==5)</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a4" name="q10">
+                                <label for="q10a4">if i=5 then</label>
+                            </div><br>
+                        </li>
+                </ol>    
+                </div>
+                <div class="quizType" id="information">
+                    <h2>Information Management And Information System Quiz &nbsp;<i class="fa-sharp fa-solid fa-circle-down"></i></h2>
+                    <ol type="1">
+                        <li>
+                            <div class="question">Exective information System are used by
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q1a1" name="q1">
+                                <label for="q1a1">Senior Management</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a2" name="q1">
+                                <label for="q1a2">Line Management
+                                </label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a3" name="q1">
+                                <label for="q1a3">Tactical leval Management</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a4" name="q4">
+                                <label for="q1a4">Operational leval Management</label>
+                            </div><br>
+                            
+                        </li>
+                        <li>
+                            <div class="question">What is not a measure of central tendency?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q2a1" name="q2">
+                                <label for="q2a1">Average</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a2" name="q2">
+                                <label for="q2a2">Mode</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a3" name="q2">
+                                <label for="q2a3">Median</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a4" name="q2">
+                                <label for="q2a4">Varience</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">What is not an element of Decision Support system?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q3a1" name="q3">
+                                <label for="q3a1"> Business improvement subsystem </label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q3a2" name="q3">
+                                <label for="q3a2"> Language subsystem</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q3a3" name="q3">
+                                <label for="q3a3"> Problrm processing subsystem</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q3a4" name="q3">
+                                <label for="q3a4"> knowledge subsystem</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">Ogive is a graph of
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q4a1" name="q4">
+                                <label for="q4a1">frequency</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a2" name="q4">
+                                <label for="q4a2">relative frequency</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a3" name="q4">
+                                <label for="q4a3">commulative frequency</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a4" name="q4">
+                                <label for="q4a4">percentage</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">
+                                What is not a problem in file based system
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q5a1" name="q5">
+                                <label for="q5a1">Inconsistent data</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a2" name="q5">
+                                <label for="q5a2">Data duplication</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a3" name="q5">
+                                <label for="q5a3">Data sharing</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a4" name="q5">
+                                <label for="q5a4">Inflexibility</label>
+                            </div><br>
+                        </li>
+                        <li>
+                            <div class="question">C stand in CATWOE for
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q6a1" name="q6">
+                                <label for="q6a1">Customer</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a2" name="q6">
+                                <label for="q6a2">Company</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a3" name="q6">
+                                <label for="q6a3">Computer</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a4" name="q6">
+                                <label for="q6a4">Coordination</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">Physical storage structures are described in
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q7a1" name="q7">
+                                <label for="q7a1">Internal schema</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a2" name="q7">
+                                <label for="q7a2">external schema</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a3" name="q7">
+                                <label for="q7a3">Conceptual schema</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a4" name="q7">
+                                <label for="q7a4">Abstraction</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">Which degree of relationship is called recursive
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q8a1" name="q8">
+                                <label for="q8a1"> Unary</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a2" name="q8">
+                                <label for="q8a2">Binary</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a3" name="q8">
+                                <label for="q8a3">Ternary</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a4" name="q8">
+                                <label for="q8a4">Quarternary</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">what is the most suitable example for M.N realtionship
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q9a1" name="q9">
+                                <label for="q9a1">School has principal</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q9a2" name="q9">
+                                <label for="q9a2">Vehicle has owner</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q9a3" name="q9">
+                                <label for="q9a3">Student study subject</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q9a4" name="q9">
+                                <label for="q9a4">Branch is managed by an employee</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">What are the main categories of information?
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q10a1" name="q10">
+                                <label for="q10a1">Operational-level system</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a2" name="q10">
+                                <label for="q10a2">Management-level system</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a3" name="q10">
+                                <label for="q10a3">strategic-level system</label>
+                            </div><br>
+                           
+                        </li>
+                </ol>    
+                </div>
+                
+                 <div class="quizType" id="computer">
+                    <h2> Computer And Network Systems Quiz &nbsp;<i class="fa-sharp fa-solid fa-circle-down"></i></h2>
+                    <ol type="1">
+                        <li>
+                            <div class="question">The data can be represented in one or two ways
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q1a1" name="q1">
+                                <label for="q1a1">Audio</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a2" name="q1">
+                                <label for="q1a2">Analog
+                                </label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a3" name="q1">
+                                <label for="q1a3">Video</label>
+                            </div><br>
+                            
+                        </li>
+                        <li>
+                            <div class="question">what is first generation hardware Technology
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q2a1" name="q2">
+                                <label for="q2a1">Transistors</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a2" name="q2">
+                                <label for="q2a2">Microprocessors</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a3" name="q2">
+                                <label for="q2a3">Vacuum Tubes</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a4" name="q2">
+                                <label for="q2a4">Aritifical Intelligence</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">what are basic logical operation
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q3a1" name="q3">
+                                <label for="q3a1"> AND</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q3a2" name="q3">
+                                <label for="q3a2"> ROX</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">which one is most suitable classification of computers
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q4a1" name="q4">
+                                <label for="q4a1">By Type</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a2" name="q4">
+                                <label for="q4a2">By colour</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a3" name="q4">
+                                <label for="q4a3">By Purpose</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a4" name="q4">
+                                <label for="q4a4">By Pric</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">What is the main mmemory of the computer
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q5a1" name="q5">
+                                <label for="q5a1">Secondary Memory</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a2" name="q5">
+                                <label for="q5a2">Primary Memory</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a3" name="q5">
+                                <label for="q5a3">Static Ram</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a4" name="q5">
+                                <label for="q5a4">Dynamic Ram</label>
+                            </div><br>
+                        </li>
+                        <li>
+                            <div class="question">Ransom Access Memory is
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q6a1" name="q6">
+                                <label for="q6a1">non volatile</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a2" name="q6">
+                                <label for="q6a2">Read only memory</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q6a3" name="q6">
+                                <label for="q6a3">volatile</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">Sequential Access device
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q7a1" name="q7">
+                                <label for="q7a1">Mangnetic disk</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a2" name="q7">
+                                <label for="q7a2">Mangnetic tap</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a3" name="q7">
+                                <label for="q7a3">Optical disk</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q7a4" name="q7">
+                                <label for="q7a4">Floppy disk</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">The information stored in storage devices can be accessed way
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q8a1" name="q8">
+                                <label for="q8a1"> Sequential access</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q8a2" name="q8">
+                                <label for="q8a2"> Direct Access</label>
+                            </div><br>
+                            
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">Floppy Disk is Non volatile.
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q9a1" name="q9">
+                                <label for="q9a1">False</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q9a2" name="q9">
+                                <label for="q9a2">True</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">what is the inexpensive storage device and slow access device
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q10a1" name="q10">
+                                <label for="q10a1">Hard disk</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a2" name="q10">
+                                <label for="q10a2">Bubble</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a3" name="q10">
+                                <label for="q10a3">Magnetic Tape</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q10a4" name="q10">
+                                <label for="q10a4">DvD</label>
+                            </div><br>
+                        </li>
+                </ol>    
+                </div>
+                <div class="quizType" id="communication">
+                    <h2>Communication Skills Quiz &nbsp;<i class="fa-sharp fa-solid fa-circle-down"></i></h2>
+                    <ol type="1">
+                        <li>
+                            <div class="question">'Madam, &nbsp; &nbsp; &nbsp;I ask you question?'Dilni asked her lecturer very politely
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q1a1" name="q1">
+                                <label for="q1a1">could</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a2" name="q1">
+                                <label for="q1a2">can't
+                                </label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q1a3" name="q1">
+                                <label for="q1a3">may</label>
+                            </div><br>
+                            
+                        </li>
+                        <li>
+                            <div class="question">We usually &nbsp; &nbsp; &nbsp; vegrtables in our home garden
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q2a1" name="q2">
+                                <label for="q2a1">growed</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a2" name="q2">
+                                <label for="q2a2">grow</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a3" name="q2">
+                                <label for="q2a3">grows</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q2a4" name="q2">
+                                <label for="q2a4">growing</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">"They were very suprised"complete the sentence by choosing the most suitable clauses
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q3a1" name="q3">
+                                <label for="q3a1">when they heard the news </label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q3a2" name="q3">
+                                <label for="q3a2"> after they got married</label>
+                            </div><br>
+                            
+                        </li>
+
+                        <li>
+                            <div class="question">"They were very suprised" complete the sentence by choosing the most suitable clauses
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q4a1" name="q4">
+                                <label for="q4a1">when i was a student</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a2" name="q4">
+                                <label for="q4a2">when they heard the news</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a3" name="q4">
+                                <label for="q4a3">after they got married</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q4a4" name="q4">
+                                <label for="q4a4">while they were asleep</label>
+                            </div><br>
+                        </li>
+
+                        <li>
+                            <div class="question">The sky is blue.However,it &nbsp; &nbsp; &nbsp; rain in the evening
+
+
+                            </div><br>
+                            <div class="answers">
+                                <input type="radio" id="q5a1" name="q5">
+                                <label for="q5a1">may</label> 
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a2" name="q5">
+                                <label for="q5a2">can't</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a3" name="q5">
+                                <label for="q5a3">could</label>
+                            </div>
+                            <div class="answers">
+                                <input type="radio" id="q5a4" name="q5">
+                                <label for="q5a4">couldn't</label>
+                            </div><br>
+                        </li>
+                </ol>    
+                </div> 
+                
+            </div>
+        </div>
+        <div class="subjects">
+            <div class="courses">
+                <h2 class="courses-title">Courses </h2>
+                <div class="HNDIT">
+                    <h1 >HNDIT</h1>
+                    <div class="semester">
+                        <h3>Semester 1</h3>
+                        <div class="subject-link"><a class="name" href="visual.html">HNDIT1012 Visual Application Programming</a></div><br>
+                        <div  class="subject-link"><a class="name" href="web.html">HNDIT1022 Web Design</a></div><br>
+                        <div class="subject-link"><a class="name" href="computernetwork.html">HNDIT1032 Computer And Network Systems</a></div><br>
+                        <div class="subject-link"><a class="name" href="information.html">HNDIT1042 Information Management And Information System</a></div><br>
+                        <div class="subject-link"><a class="name" href="ict project.html">HNDIT1052 ICT Project (Individual)</a></div><br>
+                        <div class="subject-link"><a class="name" href="communication.html">HNDIT1062 Communication Skills</a></div><br>
+                        
+                    </div>
+                    
+                    <div class="photo-visual">
+                        <img  src="../../notes pdf/visual application/5e2b4fd2b6d52d550522f628.webp" alt="visualprogramming">
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+                   
+                
+            
+                
+            
+        
+         <div class="footer" id="footer">
+            <div class="details">
+                <div class="image">
+                    <img src="../../images/SLIATE.jpeg">
+                    
+                </div>
+                <div class="text">
+                    Sri Lanka Institute of Advanced Technological Education <br>(SLIATE) - Learning Management System
+                </div>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>&nbsp; 
+                    Yayawatta,&nbsp;Godigamauwa,&nbsp;Netolpitiya
+                </div>
+                <div class="contact-item">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>&nbsp;
+                    atitangalle@sliate.ac.lk   
+                </div>
+                <div class="contact-item">
+                    <i class="fa-sharp fa-solid fa-phone"></i>&nbsp;
+                    047-2241842<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 047-2241844
+                </div>
+            </div>
+        
+        </div> 
+        
+
+    </body>
+</html>
